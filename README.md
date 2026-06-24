@@ -63,6 +63,13 @@ The other boards must be produced on PCBWay at the following links:
 
 [Link_here](https://youtu.be/5hr6UCZzYD0?si=VRYktYd-8LlZ20KM)
 
+## Minimal Instructions to program the Pico Ic
+  -  Compile the firmware source files to obtain the UF2 file (follows the [DutchMaker](https://github.com/DutchMaker/Supervision-LCD-v2) repository and ask some help to AI tools).
+  -  Populate the IPS PCB.
+  -  Without anything connected to the IPS PCB, put the SW2 switch in POS B and keep pressed the SW1 switch while connecting (with an USB cable) the IPS board to a computer. Once connected, a virtual drive will appear on your computer (you can now stop keep pressing SW1). Simply copy the UF2 file onto the drive (at this point the drive will be disconnected from the computer). Disconnect also the USB cable from the IPS board.
+  -  Finally, put the SW2 switch in POS A and connect the LCD to the VIS mainboard to test your soldering job.
+![image](images/Watara_IPS_programming.png)
+
 ## Power Consumption 
 I have done some fast measurements. Maybe I will carefully update in the future these numbers.
 
