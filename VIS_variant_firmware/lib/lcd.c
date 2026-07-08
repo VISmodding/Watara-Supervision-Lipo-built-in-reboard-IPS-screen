@@ -86,7 +86,6 @@ void lcd_write_pixel(uint16_t c)
     lcd_cmd(0x2C);
 }
 
-/* ===== Public LCD ===== */
 void lcd_init(void)
 {
     for (int g = 0; g <= 7; ++g)
@@ -116,14 +115,19 @@ void lcd_init(void)
     gpio_set_dir(LCD_PIN_RST, GPIO_OUT);
     gpio_put(LCD_PIN_RST, 1);
 
-    // Reset
-    gpio_put(LCD_PIN_RST, 0);
-    sleep_ms(20);
+    // Reset sequence from EastRising ER-TFT3.92-1 8080-8bit demo.
     gpio_put(LCD_PIN_RST, 1);
-    sleep_ms(120);
+    sleep_ms(5);
+    gpio_put(LCD_PIN_RST, 0);
+    sleep_ms(10);
+    gpio_put(LCD_PIN_RST, 1);
+    sleep_ms(50);
 
-    lcd_cmd(0x11);
-    sleep_ms(120);
+    // EastRising ST7796S initialization for ER-TFT3.92-1.
+    lcd_cmd(0xF0);
+    lcd_data8(0xC3);
+    lcd_cmd(0xF0);
+    lcd_data8(0x96);
 
     lcd_cmd(0x36);
     lcd_data8(0x40);
@@ -131,8 +135,86 @@ void lcd_init(void)
     lcd_cmd(0x3A);
     lcd_data8(0x55);
 
+    lcd_cmd(0xB4);
+    lcd_data8(0x00);
+
+    lcd_cmd(0xB6);
+    lcd_data8(0x8A);
+    lcd_data8(0x07);
+    lcd_data8(0x27);
+
+    lcd_cmd(0xB7);
+    lcd_data8(0xC6);
+
+    lcd_cmd(0xB9);
+    lcd_data8(0x02);
+    lcd_data8(0xE0);
+
+    lcd_cmd(0xC0);
+    lcd_data8(0x80);
+    lcd_data8(0x06);
+
+    lcd_cmd(0xC1);
+    lcd_data8(0x15);
+
+    lcd_cmd(0xC2);
+    lcd_data8(0xA7);
+
+    lcd_cmd(0xC5);
+    lcd_data8(0x04);
+
+    lcd_cmd(0xE8);
+    lcd_data8(0x40);
+    lcd_data8(0x8A);
+    lcd_data8(0x00);
+    lcd_data8(0x00);
+    lcd_data8(0x29);
+    lcd_data8(0x19);
+    lcd_data8(0xAA);
+    lcd_data8(0x33);
+
+    lcd_cmd(0xE0);
+    lcd_data8(0xF0);
+    lcd_data8(0x06);
+    lcd_data8(0x0F);
+    lcd_data8(0x05);
+    lcd_data8(0x04);
+    lcd_data8(0x20);
+    lcd_data8(0x37);
+    lcd_data8(0x33);
+    lcd_data8(0x4C);
+    lcd_data8(0x37);
+    lcd_data8(0x13);
+    lcd_data8(0x14);
+    lcd_data8(0x2B);
+    lcd_data8(0x31);
+
+    lcd_cmd(0xE1);
+    lcd_data8(0xF0);
+    lcd_data8(0x11);
+    lcd_data8(0x1B);
+    lcd_data8(0x11);
+    lcd_data8(0x0F);
+    lcd_data8(0x0A);
+    lcd_data8(0x37);
+    lcd_data8(0x43);
+    lcd_data8(0x4C);
+    lcd_data8(0x37);
+    lcd_data8(0x13);
+    lcd_data8(0x13);
+    lcd_data8(0x2C);
+    lcd_data8(0x32);
+
+    lcd_cmd(0xF0);
+    lcd_data8(0x3C);
+    lcd_cmd(0xF0);
+    lcd_data8(0x69);
+
     lcd_cmd(0x35);
-    sleep_ms(20);
+    lcd_data8(0x00);
+
+    lcd_cmd(0x11);
+    sleep_ms(120);
 
     lcd_cmd(0x29);
     sleep_ms(20);
@@ -140,6 +222,7 @@ void lcd_init(void)
     lcd_set_window(0, 0, LCD_WIDTH - 1, LCD_HEIGHT - 1);
 }
 
+        
 void lcd_set_palette(uint8_t index, uint16_t color)
 {
     lcd_palette[index] = color;
