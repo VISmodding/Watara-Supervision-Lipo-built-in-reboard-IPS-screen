@@ -44,6 +44,10 @@ Outside of the menu, the UP and DOWN buttons can be used to adjust the display b
 Additionally, pressing the center button twice quickly while outside the menu will save both the currently selected palette and the active backlight level into persistent memory.
 This save operation is currently the only feature that may occasionally cause instability, as it can interfere with the video capture process and temporarily freeze the display. If this happens, the console simply needs to be power-cycled, while the save operation itself will still complete successfully.
 
+## LCD Firmware FIX July 2026
+Updated the ST7796S LCD initialization sequence using the official EastRising ER-TFT3.92-1 reference code. This fixes the visible horizontal crosstalk/banding on light backgrounds while keeping the original firmware colors, menu and rendering behavior unchanged (in the video this thing can be seen). Now the driver is totally perfect with all background colors!
+
+
 ## LED Indicators
 
 The low level battery indicator LED and the charging indicator LED must be soldered under the power LED. I used 2 blue LEDs so with the console ON I get a purple light (blue+red) while charging or if battery is low (under 3.6v). Clearly you will get a blue light while charging with the console OFF. Referr to the following image for a proper installation (the image was taken from another project but essentially it is the same thing).
