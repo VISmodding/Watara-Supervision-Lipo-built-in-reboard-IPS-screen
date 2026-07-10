@@ -38,12 +38,12 @@
 | R83 (for 0.5A charging) | 3 kΩ 0603 resistor   | RC0603FR-073KL         | C126358 |
 | R83 (for 0.9A charging) | 1.8 kΩ 0603 resistor   | RC0603FR-071K8L        | C185354 |
 | R84 | 100 Ω 0603 resistor   | RC0603FR-07100RL         | C105588 |
-| C10, C11, C12, C13, C14, C15, C16, C82, C90, C92, C93, C94, CB1-CB8 | 100 nF 100 V 0603 capacitor | GCJ188R72A104KA01D         | C161117 |
+| C11, C12, C13, C14, C15, C16, C82, CB1-CB8 | 100 nF 100 V 0603 capacitor | GCJ188R72A104KA01D         | C161117 |
 | C17 | 25 V 4.7 μF 0603 capacitor | GRM188R61E475KE11D         | C90057 |
 | C21, C22 | 22 pF 50 V 0603 C0G capacitor | CC0603JRNPO9BN220         | C105620 |
-| C37, C91 | 10 μF 10 V 0603 capacitor | GRM188R61A106KE69D         | C77044 |
+| C37 | 10 μF 10 V 0603 capacitor | GRM188R61A106KE69D         | C77044 |
 | C50, C51 | 390 nF 16 V 0603 capacitor | GCM188R71C394KA55D         | C437460 |
-| C54, C55, C56, C76, C80, C81, C95 | 1 uF 16 V 0603 capacitor | GRM188R71C105KE15D         | C77049 |
+| C54, C55, C56, C80, C81, C95 | 1 uF 16 V 0603 capacitor | GRM188R71C105KE15D         | C77049 |
 | C70, C71 | 100 μF 10 V (tantalum) capacitor | T491B107K010AT         | C122271 |
 | C74 | 100 μF 10V 1206 capacitor | GRM31CR61A107ME05L         | C312983 |
 | C76 | 22 uF 10V 0603 capacitor| GRM188R61A226ME15D         | C84419 |
@@ -88,9 +88,9 @@
 | R18 | 5.1 Ω 0603 resistor   | AC0603FR-075R1L        | C227988 |
 | R31 | 1.5 MΩ 0603 resistor   | RC0603FR-071M5L        | C137773 |
 | R32 | 7.5 kΩ 0603 resistor   | AF0603FR-077K5L        | C144113 |
-| R33 | 4.7 kΩ 0603 resistor   | AC0603DR-072KL        | C227483 |
-| R35 | 2 kΩ 0603 resistor   | RC0603FR-074K7L        | C99782 |
-| C1, C2, C3, C7, C10, C12, C13, C14, C18, C19, C21, C25, C27, C28, C30, C41, C42 | 100 V 100 nF 0603 capacitor   | GCJ188R72A104KA01D          | C161117 |
+| R33 | 4.7 kΩ 0603 resistor   | RC0603FR-074K7L       | C99782 |
+| R35 | 2 kΩ 0603 resistor   |  AC0603DR-072KL        | C227483 |
+| C1, C2, C3, C7, C10, C12, C13, C14, C18, C19, C21, C25, C27, C28, C41, C42 | 100 V 100 nF 0603 capacitor   | GCJ188R72A104KA01D          | C161117 |
 | C30 | 25 V 4.7 μF 0603 capacitor   | GRM188R61E475KE11D          | C90057 |
 | C15, C150, C73, C78 | 16 V 1 μF 0603 capacitor   | GRM188R71C105KE15D          | C77049 |
 | C16, C17, C20 | 10 V 10 μF 0603 capacitor   | GRM188R61A106KE69D          | C77044 |
