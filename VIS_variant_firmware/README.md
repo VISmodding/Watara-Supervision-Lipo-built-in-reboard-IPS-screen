@@ -5,6 +5,10 @@
 This firmware is a customized version of the **[Original DutchMaker Project](https://github.com/DutchMaker/Supervision-LCD-v2)**. 
 
 > [!IMPORTANT]
+> The updated version of this firmware can be found in my new project [Here](https://github.com/VISmodding/Watara-Supervision-ONLY-IPS-LCD-MOD/tree/main)!
+
+
+> [!IMPORTANT]
 > **A huge thank you to DutchMaker** for his incredible work and for sharing the original source code with the community. Without his foundation, this "Total Reboard" project wouldn't have been possible.
 
 This specific fork has been adapted for the **VIS hardware variant**, introducing key improvements to the core synchronization logic and a new physical user interface.
